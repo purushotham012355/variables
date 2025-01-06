@@ -1,0 +1,119 @@
+Variables:
+1>case sensitive
+2>start with letters, _(underscore),$
+3>cant start with numbers
+4>reversed words not allowed
+5>allow letters, _, $, numbers
+How to declare variables
+Reassigning variables:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a ="harshitha"
+        a = "kavya"
+        a="sam"
+        console.log(a)
+        document.write(a)
+    </script>
+</body>
+</html>
+
+2nd example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=1
+        a=5
+        console.log(a+a)
+        document.write(a+a)
+
+       
+    </script>
+</body>
+</html>
+
+3rd example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=1
+        a=5
+        a=a+a
+        console.log(a+a)
+        document.write(a+a)
+
+       
+    </script>
+</body>
+</html>
+4th example:
+Let a=1;
+Let a=5;
+Document.write(a+a)
+Console.log(a+a)
+5th example
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let a="me"
+     {
+        let a="notme"
+        console.log(a)
+
+     }
+     console.log(a)
+     console.log(a)
+     console.log(a)
+    </script>
+</body>
+</html>
+
+
+
+
+IMPLEMENTED IN VS CODE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let a="me"
+     {
+        let a="notme"
+        console.log(a)
+
+     }
+     console.log(a)
+     console.log(a)
+     console.log(a)
+    </script>
+</body>
+</html>
