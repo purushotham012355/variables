@@ -1,0 +1,75 @@
+Conditional Statement:
+To make the set of instructions only when the given condition is true 
+they are used to decide whether the code has to be executed or slip based on the given condition
+executed line to line in sequence
+•	Block of code: Set of instructions
+•	Condition: An expression that evaluates an result(true or False)
+•	Ex: conslole.log(5>6)
+Methods
+•	If else
+•	Else if
+•	Switch
+•	Ternary operator
+•	If
+If: only one possible condition
+If the condition is true it will execute otherwise skip 
+Syntax:
+If(condition){	
+
+Ex1
+let a=4
+        let b=5
+        if(a<b){
+            document.write("hello skirt","<br>")
+        }
+        document.write("brilliant EI")
+
+ex2
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a=4
+        let b=5
+        if(a<b){
+            document.write("hello skirt","<br>")
+        }else{
+            document.write("hi sakiki")
+        }
+        document.write("brilliant EI")
+       
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let a = Number(prompt("Enter a score for a: "));
+        let b = Number(prompt("Enter a score for b: "));
+        let c = a + b;
+        
+        if ((a > 300 || b > 300) && (c < 500)) {
+            alert("Can team up");
+        } else {
+            alert("Cannot team up");
+        }
+        
+    </script>
+</body>
+</html>
