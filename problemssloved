@@ -1,0 +1,117 @@
+1)write  aprogram to check whether the number is divisible by 2 and 3 and both (take prompt)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter Number"));
+        if(n%2==0 && n%3==0){
+            alert("Divisible by both 2 and 3");
+        }
+        else{
+            alert("Not divisible by both 2 and 3");
+        }
+    </script>
+    
+</body>
+</html>
+
+2) program to find largest number out of three numbers input from users
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("Enter first number: "));
+        let num2 = parseInt(prompt("Enter second number: "));
+        let num3 = parseInt(prompt("Enter third number: "));
+
+        if (num1 >= num2 && num1 >= num3) {
+            document.write(num1 + " is the largest number.");
+        } else if (num2 >= num1 && num2 >= num3) {
+            document.write(num2 + " is the largest number.");
+        } else {
+            document.write(num3 + " is the largest number.");
+        }
+        
+    </script>
+    
+</body>
+</html>
+
+3)calculating the academics percentage based on total working days and showing whether the person is eligible to write the exam or not having a certain percentage of attendance
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m=parseInt(prompt("Enter the working days: "));
+        let n=parseInt(prompt("Enter the absent days: "));
+        let totalDays = m + n;
+        let workingPercentage = (m / totalDays) * 100;
+        let absentPercentage = (n / totalDays) * 100;
+        document.write("Working days percentage: " + workingPercentage + "%");
+        document.write("<br> Absent days percentage: " + absentPercentage + "%");
+        if (workingPercentage < 75) {
+            document.write("<br> You are not eligible to write the exam.");
+        }else {
+            document.write("<br> You are eligible to write the exam.");
+        }
+    </script>
+    
+</body>
+</html>
+
+4) company giving bonuses to its employees 
+Time                                        bonus
+>10 years                                   10%
+>=6 and <=10                                8%
+<6 years                                    5%
+
+Ask the user these two entities, salary and years of service and calculate bonus amount to the employees
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("salary"))
+        let b=parseInt(prompt("years of service"))
+        if(b>10){
+            let c=a*0.1
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b>=6 && b<=10){
+            let c=a*0.08
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b<6){
+            let c=a*0.05
+            let d=c+a
+            alert("after bonus salary"+a)
+        }
+        else{
+            alert(a)
+        } 
+        
+    </script>
+</body>
+</html>
+
