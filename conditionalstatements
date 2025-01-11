@@ -1,0 +1,117 @@
+1:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num =prompt("Enter a number?")
+        switch(true){
+            case num>0:
+                console.log("number is positive");
+                break;
+            case num==0:
+                console.log("numer is zero");
+                break;
+            case num<0:
+                console.log("number is negative");
+                break;
+            deafult:
+                console.log("invalid input")
+        }
+        
+    </script>
+</body>
+</html>
+
+
+
+2:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day = prompt("enater a day?")
+        switch(day){
+            case 'Monday':
+            case 'Tuesday': 
+            case 'Wednesday': 
+            case 'Thursday': 
+                console.log("its a weekday");
+                break;
+            case 'friday': 
+            case 'Saturday': 
+            case 'Sunday': 
+                console.log("its weekend");
+                break;
+            default:
+                console.log("invalid day")
+        }
+    </script>
+    
+</body>
+</html>
+
+3:
+50*2=100
+100*3=300
+100*5=500
+100*8=800
+Total100+300+500+800=2500
+2500
+0.2*2500=500sub charge
+Total Amount=2500+500=3000
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+</head>
+<body>
+    <script>
+        let units = parseInt(prompt("Enter the number of units: "));
+        let bill = 0;
+        if (units <= 50) {
+            bill = units * 2;
+        } else if (units <= 150) {
+            bill = (50 * 2) + ((units - 50) * 3);
+        } else if (units <= 250) {
+            bill = (50 * 2) + (100 * 3) + ((units - 150) * 5);
+        } else {
+            bill = (50 * 2) + (100 * 3) + (100 * 5) + ((units - 250) * 8);
+        }
+        bill += bill * 0.2;
+        document.write("<h1>Your electricity bill is: ₹" + bill.toFixed(2) + "</h1>");
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let N = parseInt(prompt("Enter the number of students: "))
+        let handshakes = N * (N - 1) / 2
+        document.write("The number of handshakes made by students is: " + handshakes)
+    </script>
+    
+</body>
+</html>
+
+
+
