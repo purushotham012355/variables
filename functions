@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function greet() {
+        //    document.write("hi obsedian")
+        //}
+        //greet()
+        //document.write("NORWay")
+        //greet()
+
+
+        //function g(name){
+        //    document.write("hello "+naive)
+        //}
+        //let naive=prompt("Enter your name?")
+        //g(naive)
+
+
+       // function g(num1, num2){
+       //     document.write(num1 + num2)
+       // }
+      //  let num1=parseInt(prompt("Enter your num1:"))
+       // let num2=parseInt(prompt("Enter your num2:"))
+       //g(num1, num2)
+
+
+       //anonymous function
+       //sum=function(n1,n2){
+       // let r=n1+n2
+       // return r
+       //}
+       //document.write(sum(541212,5454))
+
+
+    //   function checkPrime(num) {
+    //    if (num <= 1) {
+    //        document.write(num + " is not a prime number");
+    //    } else {
+    //        let flag = true;
+    //        for (let i = 2; i <= Math.sqrt(num); i++) {
+    //            if (num % i == 0) {
+    //                flag = false;
+    //                break;
+    //            }
+    //        }
+    //        if (flag) {
+    //            document.write(num + " is a prime number");
+    //        } else {
+    //            document.write(num + " is not a prime number");
+    //        }
+    //    }
+    //}
+    //let num = parseInt(prompt("Enter a number:"));
+    //checkPrime(num);
+
+
+    //function fibonacci(n) {
+    //    let fib = [0, 1];
+   //     for (let i = 2; i <= n; i++) {
+   //         fib.push(fib[i - 1] + fib[i - 2]);
+    //    }
+   //     document.write("Fibonacci numbers up to " + n + " are: " + fib.join(", "));
+   // }
+    //let n = parseInt(prompt("Enter a number:"));
+    //fibonacci(n);
+
+
+    function checkLeapYear(year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    document.write(year + " is a leap year");
+                } else {
+                    document.write(year + " is not a leap year");
+                }
+            } else {
+                document.write(year + " is a leap year");
+            }
+        } else {
+            document.write(year + " is not a leap year");
+        }
+    }
+    let year = parseInt(prompt("Enter a year:"));
+    checkLeapYear(year);
+    </script>
+</body>
+</html>
