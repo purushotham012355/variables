@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // let c=()=>{
+       //     document.write("hi", "<br>")
+       // }
+       // c();
+       //let x =(x,y)=>{
+       // document.write(x+y, "<br>")
+       //}
+       //x(20 ,30)
+       //x(40 ,50)
+       
+       //let greet=x =>document.write(x);
+       //greet('hello')
+
+       //let greet=() =>document.write("hello")
+       //greet()
+
+       //arrow functions as an expression
+       //let age =18;
+       //let welcome =(age<18) ?
+       //()=>document.write('hi chaitanya'):
+       //()=>document.write('hi narayana');
+       //welcome()
+
+       //function task1() {
+       // document.write("Task1 : Start","<br>" )
+       //}
+       //function task2() {
+       // document.write("Task2 : Start","<br>" )
+       //}
+       //function task3() {
+       // document.write("Task3 : Start","<br>" )
+      // }
+      // task1()
+       //task2()
+      // task3()
+
+      //document.write("hi suresh");
+      //setTimeout(() =>{
+//
+      //  document.write("hi i am waiting")
+      //},5000);
+//
+     // document.write(" i am in lab")
+
+
+     function greet(name,callback){
+        document.waiting(`Hello,${name}!`)
+    callback();
+        //this calls thge callback function after geeting
+     }
+     function sayGoodbye(){
+        document.write('Goodbye')
+     }
+     //call greet and pass sayGoodbye as the callback
+     greet("sam" ,sayGoodbye)
+    </script>
+</body>
+</html>
