@@ -1,0 +1,65 @@
+Callback:
+can pass the callback function as argument to another function 
+Execution:  the function receiving thye callback will execute the callback at some point during its executions(often at the end or after an asynchronous operation is done)
+
+Ex:
+        function mainFunction(callback) {
+            document.write("Execute main function", "<br>")
+            callback()
+        }
+function callbackFunction(){
+    document.write("callbackfunction executed")
+}        
+mainFunction(callbackFunction)
+
+explanation:
+mainfunction takes a callback as parameter
+callbackFunction is passes to mainfunction
+inside the mainFunction, the callfunction function is called with callback()
+
+ex2:
+passing  a named function as callback
+function greet(name ,callback){
+    document.write("hello"+name);
+    callback();
+    //it will execute the callbackfunction after greeting
+}
+function goodbye(){
+    document.write("a good very boy!")
+}
+greet("Kishore" ,goodbye)
+ex3:
+using an anonymous functions as callback
+function myCallback(data, callback1, callback2) {
+    document.write(data,"<br>");
+    callback1(data);
+    callback2(data);
+}
+
+function callback1(data) {
+    document.write('Callback 1:', data,"<br>");
+}
+
+function callback2(data) {
+    document.write('Callback 2:', data,"<br>");
+}
+
+myCallback('Hello, World!', callback1, callback2);
+
+
+ex4:
+asynchronous callback with setTimeout
+function fetchData(callback){
+  document.write("Fetching data..")
+}setTimeout(function(){
+  document.write("Data fetched...");
+  callback()
+}
+,2000
+);
+function processData(){
+  document.write("processing the fetched data....")
+}
+
+
+
