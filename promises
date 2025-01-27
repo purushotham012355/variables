@@ -1,0 +1,73 @@
+Promise:
+A promise is a special javascript object thst represents the eventual completion (or failure) of an asynchronous operation.
+Is of three states
+1)Pending : the initial state , the promise is still waiting dor the operation to finish
+2)Fullfilled: The operation completed successfully
+3)Rejected: The operation failed
+
+Exp:
+To cresate a promise new Promise();
+The promise constructor takes a function with two parameters:
+Resolve – tomark as the promise is successful
+Reject – to mark is as failed
+
+Handling;
+.then() method is called when the promise ois fulfilled.
+It receives the result from the resolve();
+.catch() met hod is called when promise is rejected;
+It receives the result from the reject(();
+Ex:
+let myPromise = new Promise((resolve ,reject)=>{
+            let success = true
+            if(success){
+                resolve("The Operation was successfully")
+            }else{
+                reject("the operation failed")
+            }
+        });
+        myPromise
+        .then(result=>{
+            document.write(result)
+        })
+        .catch(error=>{
+            document.write(error)
+        })
+
+
+Chaining promises:
+--youcan have multiple  .then()
+Ex;
+//chainig promises
+        let promise = new Promise((resolve,reject)=>{
+            resolve(5);
+        })
+        promise.then(result=>{
+            document.write(result)
+            return result * 2
+        })
+        .thrn(result=>{
+            document.write(result);
+            return result + 3;
+        })
+        .then(result=>{
+            document.write(result)
+        })
+        .catch(error=>{
+            document.write("error ,error")
+        })
+
+
+Promise with set timeout:
+--using settimeeout the promise will resolve sfter certail amount of time
+new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Promise resolved after 2 seconds");
+            }, 2000);
+        })
+        .then((result) => {
+            document.write(result,"<br>");
+        })
+        .catch((error) => {
+            document.write(error);
+        });
+
