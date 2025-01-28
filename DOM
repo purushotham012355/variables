@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: rgb(7, 57, 196);
+        }
+        .b{
+            color: rgb(245, 7, 7);
+        }
+        .c{
+            color: rgb(7, 161, 20);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="a" id="a">gaming</h1>
+    <h1 class="c" id="b">qiqi</h1>
+    <h1 class="b">lanyan</h1>
+    <h1 class="a">Hu Tao</h1>
+    <h1 class="c">xianyun</h1>
+    <h1 class="b">xianling</h1>
+    <h1 class="a">chongyun</h1>
+    <h1 class="c">ningguang</h1>
+    <h1 class="b">keqing</h1>
+    <script>
+    //let x=document.getElementById("p")
+            //console.log(x)
+
+        //let x=document.getElementsByClassName("a")
+            //console.log(x)
+
+        //let y=document.getElementsByClassName("b")
+            //console.log(y)
+            let z=document.getElementsByTagName('h1')
+            console.log(z)
+    </script>
+</body>
+</html>
+
+DOM(Document Object Model)
+--it is a programming interface in web development that allows us to interact and manipulate(change) the html documents
+When the web page is loaded , the browser creates the DOM of the webpage
+When an html pagr id laoded into the browser, javascript cannot directly understand the html document
+DOM: is basically the representation of same html document but in a tree like structure composed of objects
+HTML dom allows javascript too access (to get) and modify all the elments in Html document
+KEypoints:
+1)Structure: The DOM represents trhe structure of html document as tree; Each node in a tree represents the element, an attribute, text
+2)Manipulation: using js, you can interact with elements(buttons, h, p), we can modify , add , remove elements change styles;
+3)event handling:
+4)w3c= world wide wb cosotrium
+
+	In Dom all htmlm elements are defined objects property: is a value that you can set to the objects (like changing the content of an html element)
+1)	Getting an elemnt by id
+2)	Getting an elemnt by class
+3)	Getting an elemnt by tag name
+4)	Getting an elemnt by query selector
+<h1>
+#9 students
