@@ -1,0 +1,67 @@
+Getting Elements by class:
+Returns all the elements having the same class name 
+getElementbyClassName() – method returns an html collection object
+An html collection is array like list of html elements
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="a">lelouch</h1>
+    <h1 class="b">nunnaly</h1>
+    <h2 class"c">vanessa</h1>
+    <h1 class="a">lelouchrebellion</h1>
+    <script>
+        let x=document.getElementByTagName('h1')
+        console.log(x)
+
+        for(let i=0 ;i<x.length; i++){
+            console.log(x[i])
+        }
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="a">lelouch</h1>
+    <h1 class="b">nunnaly</h1>
+    <h2 class"c">vanessa</h1>
+    <h1 class="a">lelouchrebellion</h1>
+    <script>
+        let x=document.querySelector('h1')
+        console.log(x)
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="a">lelouch</h1>
+    <h1 class="b">nunnaly</h1>
+    <h2 class"c">vanessa</h1>
+    <h1 class="a">lelouchrebellion</h1>
+    <script>
+        let x=document.querySelectorAll('h1')
+        console.log(x)
+    </script>
+</body>
+</html>
+
