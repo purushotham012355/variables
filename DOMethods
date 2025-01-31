@@ -1,0 +1,91 @@
+DOM Methods:
+1)create-Element(single,multiple)
+2)appendChild() #parent at the end
+3)insertBefore(): insert a new node before an existing node as child node of a specified parent
+---requires a reference to both the new node and existing node you want to insert before
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='a'>
+        <h1>Ravi</h1>
+        <h1 id ="r">Ram</h1>
+    </div>
+    <div id="b">
+        <h2>sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        //to insert chiru before ram
+        let n=document.createElement('h2')
+        n.nextContent="chiru"
+
+        let p=document.getElementById('a')
+        let I=document.getElementById('r')
+        p.insertBefore(n, I)
+        
+        //to insert ganesh before ravi
+        let nn=document.createElement('h2')
+        n.nextContent="Ganesh"
+    
+        let pp=document.getElementById('a')
+        let II=document.getElementById('re')
+        p.insertBefore(nn, II)
+    </script>
+</body>
+</html>
+
+
+Remove child:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='a'>
+        <h1 id="d">Ravi</h1>
+        <h1 id ="r">Ram</h1>
+    </div>
+    <div id="b">
+        <h2>sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        let p=document.getElementById("a")
+        let a=document.getElementById("d")
+        console.log(a)
+        p.removeChild(a)
+
+        //to insert chiru before ram
+        let n=document.createElement('h2')
+        n.nextContent="chiru"
+
+        ///let p=document.getElementById('a')
+        ///let I=document.getElementById('r')
+        ///p.insertBefore(n, I)
+        
+        //to insert ganesh before ravi
+        let nn=document.createElement('h2')
+        n.nextContent="Ganesh"
+    
+        let pp=document.getElementById('a')
+        let II=document.getElementById('re')
+        p.insertBefore(nn, II)
+    </script>
+</body>
+</html>
+Replace children
+ let n=document.createElement('h1')
+       n.textContent="MAllaReddy University"
+
+       let p=document.getElementById("a")
+       p.replaceChildren(n)
+
