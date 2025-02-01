@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calculateDiscount(totalSpent, isPremiumMember) {
+            let discount = 0;
+        
+            if (totalSpent > 100) {
+                discount = 20;
+            } else if (totalSpent > 50 && totalSpent <= 100) {
+                discount = 10;
+            }
+        
+            if (isPremiumMember) {
+                discount += 5;
+            }
+        
+            return discount;
+        }
+        
+        const totalSpent = parseFloat(prompt("Enter the total amount spent:"));
+        const isPremiumMember = confirm("Are you a premium member? Click OK for Yes, Cancel for No.");
+        
+        const discount = calculateDiscount(totalSpent, isPremiumMember);
+        const finalAmount = totalSpent - (totalSpent * (discount / 100));
+        
+        document.write(`You received a ${discount}% discount.`,"<br>");
+        document.write(`Final amount to pay: Rs ${finalAmount.toFixed(2)}`);
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkVotingEligibility(age, isCitizen, passedCitizenshipTest) {
+            if (age < 18) {
+              return "You cannot vote because you are under 18.";
+            }
+          
+            if (isCitizen) {
+              return "You are eligible to vote!";
+            }
+          
+            if (passedCitizenshipTest) {
+              return "You are eligible to vote!";
+            }
+          
+            return "You are not eligible to vote because you are not a citizen and have not passed the citizenship test.";
+          }
+          
+          function main() {
+            const age = parseInt(prompt("Please enter your age:"));
+            const isCitizen = prompt("Are you a citizen? (yes/no):").toLowerCase() === "yes";
+            let passedCitizenshipTest = false;
+          
+            if (!isCitizen) {
+              passedCitizenshipTest = prompt("Have you passed the citizenship test? (yes/no):").toLowerCase() === "yes";
+            }
+          
+            const result = checkVotingEligibility(age, isCitizen, passedCitizenshipTest);
+          
+            console.log(result);
+            alert(result); 
+          }
+          
+          main();
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkEventEligibility(isVIP, hasSpecialInvitation, age) {
+            if (age < 18) return "You cannot attend any events because you are under 18.";
+            if (isVIP) return "You can attend all events as a VIP user.";
+            if (hasSpecialInvitation) return "You can attend special events with your invitation.";
+            return "You are not eligible to attend any events.";
+          }
+          
+          const isVIP = prompt("Are you a VIP user? (yes/no):").toLowerCase() === "yes";
+          const hasSpecialInvitation = prompt("Do you have a special invitation? (yes/no):").toLowerCase() === "yes";
+          const age = parseInt(prompt("Enter your age:"));
+          
+          const result = checkEventEligibility(isVIP, hasSpecialInvitation, age);
+          console.log(result);
+          alert(result);
+    </script>
+</body>
+</html>
