@@ -1,0 +1,66 @@
+Create element by using js:
+Document.createElement(‘h1’)
+Create element by using react js:
+React.createElement(‘h1’)
+Syntax:
+React.createElement(type,props)
+Type=tagname(h1,p,div)
+Prop=id,classname,onclick
+ReactDOM.createRoot()
+ReactDOM.render()-used to display element.
+Syntax:
+reactElement=what to render
+Container = where to render
+JSX:
+Javascript XML
+It is a syntax extension for js
+Here we write the html code and this will be translated into js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="react.js"></script>
+</body>
+</html>
+
+Js:
+
+const b=React.createElement(
+    'h1' ,{id:'a'} ,"I am Ganesh"
+);
+
+const element=document.getElementById('root')
+const root =ReactDOM.createRoot(element)
+
+root.render(b)
+
+2nd example:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+    const element=<h1 className="a">Hello jsx!</h1>
+    const e=document.getElementId('app')
+    const root=ReactDOM.createRoot(e)
+    root.render(element)
+</script>
+</body>
+</html>
