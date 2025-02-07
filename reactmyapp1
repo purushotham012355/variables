@@ -1,0 +1,65 @@
+import React from "react";
+const FruitList=()=>{
+    const fruits= ['apple' ,'cherry' ,'orange',`Grapes`,'banana'];
+    return(
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map((fruit, index)=>(
+                    <li key={index}> {fruit}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+export default FruitList;
+
+import React from 'react'
+//import './App.css'
+//import Welcome from './Welcome'
+import Greeting from './Greeting'
+import FruitList from './FruitList';
+
+function App(){
+  const isLoggedIn =true;
+  return(
+    <div className="App">
+      <Greeting isLoggedIn={isLoggedIn}/>
+      <FruitList/>
+    </div>
+  )
+}
+
+//const App=()=>{
+ //return(
+      //<div style={{textAlign:'center',color:'red'}}>
+
+        //<Welcome name="mizuki" greeting="hello"/>
+       // <Welcome name="shogun" greeting="hello"/>
+       // </div>
+ // )
+//}
+
+//const Welcome =()=> <h1 className="message">hello Ravi </h1>
+
+//function App() {
+  //return (
+    //<div className="App">
+      //<Welcome/>
+    //</div>
+  //);
+//}
+
+export default App;
+
+
+import React from 'react';
+
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome Back!</h1>
+    }else{
+        return <h1>Please Login</h1>
+    }
+}
+export default Greeting;
