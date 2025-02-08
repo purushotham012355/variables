@@ -1,0 +1,74 @@
+State:
+State in react:
+In react, state is like a container that holds the data or info for a component.
+This data can be chabge over time based on user actions or events
+Why state is important:
+it allows the component to remember things
+Ex: if you click a button to change a color;
+The state will store hold the color and show on the screen
+Syntax:
+Const[statevariable,setStatefunction]
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb & Luffy Toggle</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.5s;
+        }
+        .bulb {
+            width: 150px;
+            margin-bottom: 20px;
+            transition: opacity 0.5s;
+        }
+        .luffy {
+            width: 150px;
+            transition: opacity 0.5s;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" 
+         class="bulb" id="bulbImage" alt="Light Bulb Off" />
+    <img src="https://i.pinimg.com/736x/fc/de/5f/fcde5f0129a98fe68bb7d543f525e8b2.jpg" 
+         class="luffy" id="luffyImage" alt="Luffy Straight Face" />
+    <button class="button" id="toggleButton" onClick="toggleState()">Turn On</button>
+    
+    <script>
+        let isOn = false;
+        function toggleState() {
+            const body = document.getElementById("body");
+            const bulbImage = document.getElementById("bulbImage");
+            const luffyImage = document.getElementById("luffyImage");
+            const toggleButton = document.getElementById("toggleButton");
+
+            isOn = !isOn;
+            if (isOn) {
+                body.style.backgroundColor = 'lightyellow';
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                luffyImage.src = "https://sketchok.com/images/articles/06-anime/002-one-piece/26/16m.jpg";
+                toggleButton.innerText = 'Turn Off';
+            } else {
+                body.style.backgroundColor = 'white';
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                luffyImage.src = "https://i.pinimg.com/736x/fc/de/5f/fcde5f0129a98fe68bb7d543f525e8b2.jpg";
+                toggleButton.innerText = "Turn On";
+            }
+        }
+    </script>
+</body>
+</html>
