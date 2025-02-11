@@ -1,0 +1,71 @@
+import React from "react";
+import ProfileCard from "./ProfileCard";
+
+const App = () => {
+  return (
+    <div>
+      <h1>User Profiles</h1>
+      <div className="profile-container" style={{display: 'flex', justifyContent: 'center'}}>
+        <ProfileCard
+          name="John"
+          greeting="HI!"
+          imageSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKKPqW3ak0sSU5UNBwAgNdi4fTUrNSPcavPw&s"
+        />
+        <ProfileCard
+          name="Carter"
+          greeting="Hello!"
+          imageSrc="https://static.vecteezy.com/system/resources/previews/002/406/611/non_2x/business-man-cartoon-character-vector.jpg"
+        />
+        <ProfileCard
+          name="Loco"
+          greeting="Hey Yo!"
+          imageSrc="https://i.pinimg.com/736x/dd/c9/94/ddc99431efdd88c161e0bdd38355655c.jpg"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default App;
+
+
+.profile-card {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+
+
+import React from "react";
+import "./App.css"; // Import the CSS file
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={`${name}'s profile`} className="profile-image" />
+      <h2>{name}</h2>
+      <p>{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
