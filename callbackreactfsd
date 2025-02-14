@@ -1,0 +1,68 @@
+Callback in react :
+ In react , a call back is a function that is passed as an argument to another function
+. call backs are often to communicate with different components
+EX:
+A parent component passing as callback to a child
+. parent component displays a message; and child component has a button
+. when the button is clicked, the child will use callback and tells the parent component to update the message 
+
+
+/*import React,{useReducer} from "react";
+
+function appleReducer(state={count:3, apples:[], price:0},action){
+  switch(action.type){
+    case 'ADD_APPLE':
+      return {count: state.count+1, apples: [...state.apples, 'apple'], price: state.price+5};
+    case 'EAT_APPLE':
+      if(state.count > 0){
+        return {count: state.count-1, apples: state.apples.slice(0, -1), price: state.price-5};
+      }
+      return state;
+    default:
+      return state;
+  }
+}
+function App() {
+  const [state,dispatch]=useReducer(appleReducer,{count:3, apples:[], price:0})
+  return (
+    <div>
+      <h1>Apple counter</h1>
+      <p>Number of apples:{state.count}</p>
+      <p>Total price: Rs:{state.price}</p>
+      <div>
+        {state.apples.map((apple, index) => (
+          <img key={index} src="https://tse3.mm.bing.net/th?id=OIP.KhdGeX1d8QMmtow7Lm5AZAHaF1&pid=Api&P=0&h=180" alt="apple" />
+        ))}
+      </div>
+      <button onClick={()=>dispatch({type:'ADD_APPLE'})}>ADD APPLE</button>
+      <button onClick={()=>dispatch({type:'EAT_APPLE'})}>EAT APPLE</button>
+    </div>
+  )
+}
+export default App;*/
+import React, { useState } from "react";
+import Child from './Child';
+const Parent=()=>{
+  const [message,setMessage]=useState('Hello world')
+
+  const changeMessage=()=>{
+    setMessage('Hello button is clicked')
+  };
+  return (
+    <div>
+      <h1>
+        {message}
+      </h1>
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+
+
+import React from 'react'
+const Child=({changeMessage})=>{
+    return(
+        <button onClick={changeMessage}> Click me</button>
+    )
+}
+export default Child;
