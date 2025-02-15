@@ -1,0 +1,107 @@
+app.js:
+import React from 'react';
+import { ListProvider } from './components/ListContext';
+import AddItem from './components/AddItem';
+import ItemList from './components/ItemList';
+
+const App = () => {
+  return (
+    <ListProvider>
+      <div>
+        <h1>Item List Manager</h1>
+        <AddItem />
+        <ItemList />
+      </div>
+    </ListProvider>
+  );
+};
+
+export default App;
+
+additem.js:
+import React, { useState, useContext } from 'react';
+import { ListContext } from './ListContext';
+
+const AddItem = () => {
+  const [inputValue, setInputValue] = useState('');
+  const { dispatch } = useContext(ListContext);
+
+  const handleAddItem = () => {
+    if (inputValue.trim()) {
+      dispatch({ type: 'ADD_ITEM', payload: inputValue });
+      setInputValue('');
+    }
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        placeholder="Enter a new item"
+      />
+      <button onClick={handleAddItem}>Add Item</button>
+    </div>
+  );
+};
+
+export default AddItem;
+
+itemlist.js:
+import React, { useContext, useMemo } from 'react';
+import { ListContext } from './ListContext';
+
+const ItemList = () => {
+  const { list, dispatch } = useContext(ListContext);
+
+  const memoizedList = useMemo(() => list, [list]);
+
+  const handleRemoveItem = (id) => {
+    dispatch({ type: 'REMOVE_ITEM', payload: id });
+  };
+
+  return (
+    <div>
+      <h2>Items List ({memoizedList.length})</h2>
+      <ul>
+        {memoizedList.map(item => (
+          <li key={item.id}>
+            {item.text}
+            <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ItemList;
+
+listcontext.js:
+import React, { useReducer, createContext, useMemo } from 'react';
+
+export const ListContext = createContext();
+
+const listReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_ITEM':
+      return [...state, { id: Date.now(), text: action.payload }];
+    case 'REMOVE_ITEM':
+      return state.filter(item => item.id !== action.payload);
+    default:
+      return state;
+  }
+};
+
+export const ListProvider = ({ children }) => {
+  const [list, dispatch] = useReducer(listReducer, []);
+
+  const contextValue = useMemo(() => ({ list, dispatch }), [list]);
+
+  return (
+    <ListContext.Provider value={contextValue}>
+      {children}
+    </ListContext.Provider>
+  );
+};
